@@ -1,0 +1,251 @@
+/* Pomodoro Timer Styles */
+.pomodoroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #f39c12, #f1c40f); /* Gradient background */
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.cycleContainer {
+  margin: 20px 0;
+}
+
+.pomodoroCycle,
+.activityCycle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  margin-bottom: 20px;
+}
+
+.timerText {
+  font-size: 20px; /* Increased font size for more emphasis */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for digital look */
+  fill: limegreen; /* Bright color similar to digital displays */
+  font-weight: bold;
+  text-shadow: 0 0 10px limegreen, /* Outer glow */
+               0 0 20px limegreen, /* Larger glow */
+               0 0 30px limegreen; /* Faint outermost glow */
+  letter-spacing: 0.1rem; /* Slight spacing for digital effect */
+  
+  /* Outline stroke along text */
+  stroke: black; /* Color of the outline */
+  stroke-width: 2px; /* Thickness of the outline */
+  paint-order: stroke fill; /* Ensure the stroke is drawn below the fill */
+}
+
+.adjustButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.adjustButtons button {
+  background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient buttons */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.adjustButtons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.buttons button {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.buttons button:active {
+  transform: translateY(2px);
+}
+
+.pomodoroCycle svg,
+.activityCycle svg {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.pomodoroCycle circle {
+  stroke: #e74c3c; /* Red stroke for Pomodoro */
+}
+
+.activityCycle circle {
+  stroke: #3498db; /* Blue stroke for Activity */
+}
+
+@media (max-width: 600px) {
+  .pomodoroContainer {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .timerText {
+    font-size: 20px;
+  }
+
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Settings Styles */
+.settingsIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px; /* Adjusted for visibility */
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.settingsIcon:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+.settingsBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 300px; /* Fixed width for consistency */
+}
+
+.settingsModal {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsModal h2 {
+  color: #333; /* Darker title for contrast */
+  margin-bottom: 10px;
+}
+
+.settingsModal label {
+  color: #333; /* Darker label for contrast */
+}
+
+.settingsModal input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.settingsModal button {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.settingsModal button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+
+.settingsModal {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.pomodoroBreakContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.columnHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Space between the Pomodoro and Break inputs */
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px; /* You can adjust this width */
+}
+
+
+
